@@ -1,0 +1,33 @@
+<div class="container" >
+    <form  (ngSubmit)="createCar(formRef)" #formRef="ngForm">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Make</label>
+            <input class="form-control" type="text" placeholder="make" name="start" [(ngModel)]="field_data.make" required minlength="2" #start="ngModel"/>
+            <ng-container *ngIf="start.invalid && start.touched">
+              <div class="" *ngIf="start.errors.required">
+                Field is required
+              </div>
+              <div class="" *ngIf="start.errors.minlength">
+                Number is so schort
+              </div>
+            </ng-container>
+        </div>
+        <div class="form-group">
+         <label for="exampleInputEmail1">Model</label>
+          <input class="form-control" type="text" placeholder="write our car name" name="model" [(ngModel)]="field_data.model" required minlength="2" #end="ngModel"/>
+          <ng-container *ngIf="end.invalid && end.touched">
+            <div class="" *ngIf="end.errors.required">
+              Field is required
+            </div>
+            <div class="" *ngIf="end.errors.minlength">
+              Number is so schort
+            </div>
+          </ng-container>
+        </div>
+        <button id="add" type="submit" class="btn btn-primary"  [disabled]="formRef.invalid">Add</button>
+        <button id="reset" type="reset" class="btn btn-danger">Cancel</button>
+      
+  </form>
+</div>
+
+

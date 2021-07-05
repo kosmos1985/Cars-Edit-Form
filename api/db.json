@@ -1,0 +1,46 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "make": "BMW",
+      "model": "Series 3"
+    },
+    {
+      "id": 2,
+      "make": "Ford",
+      "model": "Mondeo"
+    },
+    {
+      "id": 3,
+      "make": "Audi",
+      "author": "A6"
+    }
+  ],
+  "descriptions": [
+    {
+      "id": 1,
+      "body": "The BMW 3 Series is a compact executive car manufactured by the German automaker BMW since May 1975.",
+      "carId": 1
+    },
+    {
+      "id": 2,
+      "body": "The 3 Series is BMW's best-selling model, accounting for around 30% of the BMW brand's annual total sales (excluding motorbikes). The BMW 3 Series has won numerous awards throughout its history.",
+      "carId": 1
+    },
+    {
+      "id": 3,
+      "body": "The Ford Mondeo is a large family car manufactured by Ford since 1993. The first Ford declared a \"world car\", the Mondeo was intended to consolidate several Ford model lines worldwide",
+      "carId": 2
+    },
+    {
+      "id": 4,
+      "body": "For its first two generations, the Ford Mondeo was produced using the Ford CDW27 platform, with the third generation shifting to the EUCD platform. The fourth (current) generation uses the Ford CD4 platform (the first car to do so). Due to declining sales and a growing trend towards SUV-Crossovers over sedans, Ford plans to discontinue the Mondeo in March 2022 with no direct successor.",
+      "carId": 2
+    },
+    {
+      "id": 5,
+      "body": "The Audi A6 is an executive car made by the German automaker Audi. ... All generations of the A6 have offered either front-wheel-drive or Torsen-based four-wheel-drive, marketed by Audi as their quattro system. The A6 has also been used as the basis for the company's Allroad models since 1999.",
+      "carId": 3
+    }
+  ]
+}

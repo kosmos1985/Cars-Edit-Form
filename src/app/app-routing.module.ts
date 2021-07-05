@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'car', component: CarComponent },
   { path: 'form', component: FormComponent },
   { path: 'form-edit', component: FormEditComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'car', pathMatch: 'full'},
   { path: '**', redirectTo: 'not-found', pathMatch: 'full'  },
 ];
 

@@ -11,11 +11,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormComponent } from './form/form.component';
 import { DesctriptionComponent } from './desctription/desctription.component';
 import { FormEditComponent } from './form-edit/form-edit.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [AppComponent, CarComponent, HomeComponent, PageNotFoundComponent, FormComponent, DesctriptionComponent, FormEditComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })

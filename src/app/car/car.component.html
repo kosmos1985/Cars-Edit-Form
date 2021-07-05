@@ -1,4 +1,20 @@
-<div class="container">
-    
-    <app-description></app-description>
+<div class="container" >
+        <table class="table table-hover table-dark" >
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let car of allCars">
+                <th scope="row">{{car.id}}</th>
+                <td>{{car.make}}</td>
+                <td>{{car.model}}</td>
+              </tr>
+            </tbody>
+          </table>
+      
+    <!-- <app-description></app-description> -->
 </div>

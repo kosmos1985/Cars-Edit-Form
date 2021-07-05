@@ -12,10 +12,7 @@
 
 <!-- content inside main-content you can modify -->
 <div class="main-content">
-  <app-home></app-home>
-  <!-- <div *ngIf="dataIsAvailable">
-    <div *ngFor="let car of cars">
-      {{ cars | json }}
-    </div> -->
-  <!-- </div> -->
+  <app-home [carsList]="cars"></app-home>
+  <!-- <app-car [allCars]="cars"></app-car> -->
+  <router-outlet></router-outlet>
 </div>

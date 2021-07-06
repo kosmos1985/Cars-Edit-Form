@@ -1,50 +1,6 @@
-<!-- <h2 mat-dialog-title>
-  <table class="header">
-    <tr class="row1">
-    <b (click)="console(data)">{{data.data.make}}  Car Details</b>
-    </tr>
-    <tr class="row2">
-      <b>{{data.data.model }} </b>
-    </tr>
-</table>
-<mat-dialog-actions align="end">
-    <button   mat-dialog-close 
-    type="button" 
-    class="close" 
-    [mat-dialog-close]="control.value" 
-    ></button>
-</mat-dialog-actions>
-</h2>
-<mat-dialog-content class="mat-typography">
-  <form class="form">
-    <div class="centre-frame">
-    <label >Registration</label>
-    <input type="text"
-           class="form-control"
-           placeholder="Search for a codes"
-           [formControl]="control"
-           [matAutocomplete]="auto"
-           >
-    <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
-      <mat-option>
-        Registration ()
-      </mat-option>
-      <mat-option  >
-        *ngFor="let description of descriptions | async" [value]="description"-->
-        <!-- {{description}} -->
-      <!-- </mat-option>
-    </mat-autocomplete>
-  </div>
-  </form>
-</mat-dialog-content>
-<footer>
-  <mat-dialog-actions align="center">
-    <button mat-button  mat-dialog-close>Cancel</button>
-    <button mat-button  color="primary" [mat-dialog-close]="control.value" cdkFocusInitial>Save</button>
-  </mat-dialog-actions>
-</footer> --> 
 <h1 mat-dialog-title>Dialog with elements</h1>
-<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
+<div mat-dialog-content>{{car}}</div>
+<div mat-dialog-content>{{descriptions[0].body}}</div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
 </div>

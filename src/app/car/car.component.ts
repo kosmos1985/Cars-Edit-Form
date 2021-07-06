@@ -22,17 +22,17 @@ export class CarComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
    
   };
-  openDialog() {
-    // const dialogConfig = new MatDialogConfig();
-    // dialogConfig.data = {data: allCars};
+  openDialog(car: any) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data = {data: car};
 
-    // const dialogRef = this.dialog.open(DesctriptionComponent, dialogConfig);
+    this.dialog.open(DesctriptionComponent, dialogConfig);
 
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(dialogRef._containerInstance._config.data.data.make);
     //   console.log(`Dialog result: ${result}`);
     // });
-    this.dialog.open(DesctriptionComponent)
+    // this.dialog.open(DesctriptionComponent)
   };
  
   ngOnDestroy() {

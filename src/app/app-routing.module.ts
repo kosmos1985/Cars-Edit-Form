@@ -10,7 +10,7 @@ import { DesctriptionComponent } from './desctription/desctription.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'home/:id', component: DesctriptionComponent },
+  { path: 'descriptions/:id', component: DesctriptionComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: 'form', component: FormComponent },
   { path: 'form-edit', component: FormEditComponent },

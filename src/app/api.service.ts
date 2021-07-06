@@ -23,12 +23,12 @@ export class ApiService {
     return this.http.get<Descriptions[]>(`${BASE_URL}/descriptions`);
   };
 
-  getOnceDescriptions(items: string | number | null | undefined) {
-    let item = this.http.get<Descriptions[]>(`${BASE_URL}/descriptions`).pipe(map(result=>result.filter(result => result.id === items)));
+  // getOnceDescriptions(items: number ) {
+  //   let item = this.http.get<Descriptions[]>(`${BASE_URL}/descriptions`).pipe(map(result=>result.filter(result => result.id === items)));
     
-    return console.log(item);
+  //   return console.log(item);
     
-  };
+  // };
   
 }
 

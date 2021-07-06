@@ -11,13 +11,18 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormComponent } from './form/form.component';
 import { DesctriptionComponent } from './desctription/desctription.component';
 import { FormEditComponent } from './form-edit/form-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatButtonModule } from "@angular/material/button";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 
 
 
 @NgModule({
   declarations: [AppComponent, CarComponent, HomeComponent, PageNotFoundComponent, FormComponent, DesctriptionComponent, FormEditComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatDialogModule,MatFormFieldModule,MatButtonModule,MatAutocompleteModule],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })

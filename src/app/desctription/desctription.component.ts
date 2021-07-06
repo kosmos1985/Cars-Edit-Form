@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ApiService } from '../api.service';
+import { Descriptions } from '../models/descriptions';
 
 @Component({
   selector: 'app-desctription',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesctriptionComponent implements OnInit {
 
-  constructor() { }
+  
+  descriptions: Descriptions[] = [];
+  private subscriptions = new Subscription();
+
+  constructor(private apiService: ApiService,  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+  
+    const sub = this.apiService. getDescriptions1().subscribe(descriptions => {
+      this.descriptions = descriptions;
+     
+    });
+  
+    this.subscriptions.add(sub);
+
+    // let items = this.route.snapshot.paramMap.get('id');
+    // this.descriptions = this.apiService.getDescriptions(items);
+
+  }
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
   }
 
 }

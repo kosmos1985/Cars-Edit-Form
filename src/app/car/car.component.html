@@ -1,4 +1,5 @@
 <div class="container" >
+  <h4>Car list:</h4>
         <table class="table table-hover table-dark" >
             <thead class="thead-dark">
               <tr>
@@ -8,13 +9,11 @@
               </tr>
             </thead>
             <tbody >
-              <tr *ngFor="let car of allCars">
+              <tr *ngFor="let car of allCars" [routerLink]="['/home', car.id]">
                 <th scope="row">{{car.id}}</th>
                 <td>{{car.make}}</td>
                 <td>{{car.model}}</td>
               </tr>
             </tbody>
           </table>
-      
-    <!-- <app-description></app-description> -->
 </div>

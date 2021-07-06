@@ -12,7 +12,18 @@
 
 <!-- content inside main-content you can modify -->
 <div class="main-content">
-  <app-home [carsList]="cars"></app-home>
-  <!-- <app-car [allCars]="cars"></app-car> -->
-  <router-outlet></router-outlet>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Basic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/form">Advanced - add new cars to data base</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/form-edit">Optional - edit and modify all cars</a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
 </div>

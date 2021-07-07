@@ -17,9 +17,9 @@ export class ApiService {
     return this.http.get<Car[]>(`${BASE_URL}/cars`);
   };
 
-  getCar(id: number) {
+  getCar(id: number):Observable<Car> {
     let endPoints = `/` + id;
-    return this.http.get<Car>(`${BASE_URL}/cars` + endPoints).pipe(tap(console.log));
+    return this.http.get<Car>(`${BASE_URL}/cars` + endPoints).pipe();
   };
   postCar(newCar:Partial<Car>) {
     return this.http.post(`${BASE_URL}/cars`, newCar).pipe(tap(console.log));
@@ -33,8 +33,10 @@ export class ApiService {
     let endPoints = `/`+ id
     return this.http.delete<{}>(`${BASE_URL}/cars` + endPoints).pipe(tap(console.log));
   };
-
-
+  patchCar(formRef: { value: string; }, id: number): Observable<Car> {
+    let endPoints = `/` + id;
+    return this.http.patch<Car>(`${BASE_URL}/cars` + endPoints, formRef).pipe(tap(console.log));
+  };
   
 }
 

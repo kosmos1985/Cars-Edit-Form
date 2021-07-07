@@ -1,8 +1,9 @@
 <div class="container" >
-    <form  (ngSubmit)="updateCar(formRef)" #formRef="ngForm">
+    <ng-container *ngIf="field_data">
+    <form  (ngSubmit)="updateCar(formRef.value, car.id)" #formRef="ngForm">
         <div class="form-group">
             <label for="exampleInputEmail1">Make</label>
-            <input class="form-control" type="text" placeholder="make" name="start" [(ngModel)]="field_data.make" required minlength="2" maxlength="15" #start="ngModel"/>{{car | json}}
+            <input class="form-control" type="text" placeholder="make" name="start" [(ngModel)]="field_data.make" required minlength="2" maxlength="15" #start="ngModel"/>
                 <ng-container *ngIf="start.invalid && start.touched">
                   <div class="text-danger" *ngIf="start.errors">
                     Field is required
@@ -33,10 +34,10 @@
                    </div>
                  </ng-container>
            </div>
-        <button id="add" type="submit" class="btn btn-primary"  [disabled]="formRef.invalid">Add</button>
-        <button id="reset" type="reset" class="btn btn-danger">Cancel</button>
-      
+        <button id="add" type="submit" class="btn btn-primary"  [disabled]="formRef.invalid">Update</button>
+        <button id="reset" type="reset" class="btn btn-danger">Cancel</button> 
   </form>
+ </ng-container>
 </div>
 
 

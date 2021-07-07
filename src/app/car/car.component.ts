@@ -1,10 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { ApiService } from '../api.service';
+import { Component, Input, OnInit } from '@angular/core';
+
 import { Car } from '../models/car';
-// import { Descriptions } from '../models/descriptions';
-import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
-import { DesctriptionComponent } from '../desctription/desctription.component';
+import { Descriptions } from '../models/descriptions';
+
+
 
 
 @Component({
@@ -12,32 +11,20 @@ import { DesctriptionComponent } from '../desctription/desctription.component';
   templateUrl: './car.component.html',
   styleUrls: ['./car.component.scss']
 })
-export class CarComponent implements OnInit, OnDestroy{
+export class CarComponent implements OnInit{
 
  @Input()
- allCars!: Car[];
- private subscriptions = new Subscription();
- constructor( public dialog: MatDialog) { }
+ allCars!: Car;
+  
+  @Input()
+  allDescriptions!: Descriptions;
+
+ constructor() { }
 
   ngOnInit(): void {
    
   };
-  openDialog(car: any) {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.data = {data: car};
-
-    this.dialog.open(DesctriptionComponent, dialogConfig);
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(dialogRef._containerInstance._config.data.data.make);
-    //   console.log(`Dialog result: ${result}`);
-    // });
-    // this.dialog.open(DesctriptionComponent)
-  };
  
-  ngOnDestroy() {
-    this.subscriptions.unsubscribe();
-};
 }
 
 

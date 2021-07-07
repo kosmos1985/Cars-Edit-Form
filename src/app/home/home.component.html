@@ -1,5 +1,11 @@
 <div *ngIf="dataIsAvailable">
- <app-car [allCars]="cars"></app-car>
+<ng-container *ngFor="let description of descriptions">
+ <app-car *ngFor="let car of cars" 
+ [allCars]="car" 
+ [allDescriptions]="description" 
+ (click)="openDialog(car,description)">
+</app-car>
+</ng-container>
 </div>
  
   

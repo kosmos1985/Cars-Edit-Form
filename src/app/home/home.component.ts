@@ -4,7 +4,7 @@ import { ApiService } from '../api.service';
 import { Subscription } from 'rxjs';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DesctriptionComponent } from '../desctription/desctription.component';
-import { Descriptions } from '../models/descriptions';
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   dataIsAvailable: boolean;
   cars: Car[] = [];
  
-  
   private subscriptions = new Subscription();
   
 
@@ -29,7 +28,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.dataIsAvailable = true;
     });
     this.subscriptions.add(sub);
-
    
   }
   openDialog(car: any,c:any) {

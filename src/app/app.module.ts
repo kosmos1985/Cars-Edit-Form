@@ -17,11 +17,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from "@angular/material/button";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { EditComponent } from './edit/edit.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, CarComponent, HomeComponent, PageNotFoundComponent, FormComponent, DesctriptionComponent, FormEditComponent],
+  declarations: [AppComponent, CarComponent, HomeComponent, PageNotFoundComponent, FormComponent, DesctriptionComponent, FormEditComponent, EditComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatDialogModule,MatFormFieldModule,MatButtonModule,MatAutocompleteModule],
   providers: [ApiService],
   bootstrap: [AppComponent]

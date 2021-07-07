@@ -16,6 +16,11 @@ export class ApiService {
   getCars() {
     return this.http.get<Car[]>(`${BASE_URL}/cars`);
   };
+
+  getCar(id: number) {
+    let endPoints = `/` + id;
+    return this.http.get<Car>(`${BASE_URL}/cars` + endPoints).pipe(tap(console.log));
+  };
   postCar(newCar:Partial<Car>) {
     return this.http.post(`${BASE_URL}/cars`, newCar).pipe(tap(console.log));
   };
@@ -24,9 +29,10 @@ export class ApiService {
     return this.http.get<Descriptions[]>(`${BASE_URL}/descriptions`);
   };
 
-  // deleteGrades(id: number): Observable<{}> {
-  //   return this.http.delete<{}>(`${BASE_URL}/cars` + id).pipe(tap(console.log));
-  // };
+  deleteCar(id: number): Observable<{}> {
+    let endPoints = `/`+ id
+    return this.http.delete<{}>(`${BASE_URL}/cars` + endPoints).pipe(tap(console.log));
+  };
 
 
   

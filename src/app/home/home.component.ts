@@ -14,10 +14,10 @@ import { Descriptions } from '../models/descriptions';
 export class HomeComponent implements OnInit, OnDestroy {
   dataIsAvailable: boolean;
   cars: Car[] = [];
-  descriptions: Descriptions[] = [];
+ 
   
   private subscriptions = new Subscription();
-  private subscriptions2 = new Subscription();
+  
 
   constructor(private apiService: ApiService, public dialog: MatDialog) {
     this.dataIsAvailable = false;
@@ -30,23 +30,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
     this.subscriptions.add(sub);
 
-    const sub2 = this.apiService.getDescriptions1().subscribe(dataDes => {
-      this.descriptions = dataDes;
-      console.log(this.descriptions);
-    }, error => console.error(error),
-      ()=>console.log('Complite')
-    );
-    this.subscriptions2.add(sub2);
+   
   }
-  openDialog(car: any, description: any) {
+  openDialog(car: any,c:any) {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.data = [{ data: car },{dataDescription: description}];
+    dialogConfig.data = [{ data: car },{indexcar:c}];
 
     this.dialog.open(DesctriptionComponent, dialogConfig);
-  }
+  };
+
   ngOnDestroy() {
     this.subscriptions.unsubscribe();
-    this.subscriptions2.unsubscribe();
-  }
+  };
 
 }

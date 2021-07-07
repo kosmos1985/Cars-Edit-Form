@@ -1,7 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input, OnDestroy, OnInit} from '@angular/core';
 import { Car } from '../models/car';
-import { Descriptions } from '../models/descriptions';
 
 
 
@@ -11,19 +9,12 @@ import { Descriptions } from '../models/descriptions';
   templateUrl: './car.component.html',
   styleUrls: ['./car.component.scss']
 })
-export class CarComponent implements OnInit{
+export class CarComponent {
 
  @Input()
  allCars!: Car;
-  
-  @Input()
-  allDescriptions!: Descriptions;
-
  constructor() { }
-
-  ngOnInit(): void {
-   
-  };
+  
  
 }
 

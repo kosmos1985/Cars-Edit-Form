@@ -1,6 +1,8 @@
 <h1 mat-dialog-title>Dialog with elements</h1>
 <div mat-dialog-content><strong>{{data[0].data.make}}  {{data[0].data.model}} </strong></div>
-<div mat-dialog-content>{{data[1].dataDescription.body}}</div>
+<ng-container  *ngFor="let description of descriptions">
+<div mat-dialog-content *ngIf="description.carId === data[0].data.id">{{description.body}}</div>
+</ng-container>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
 </div>

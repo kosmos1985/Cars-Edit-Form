@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Car } from './models/car';
 import { map, tap} from 'rxjs/operators';
 import { Descriptions } from './models/descriptions';
+import { Observable } from 'rxjs';
 
 const BASE_URL = '/api';
 
@@ -23,12 +24,11 @@ export class ApiService {
     return this.http.get<Descriptions[]>(`${BASE_URL}/descriptions`);
   };
 
-  // getOnceDescriptions(items: number ) {
-  //   let item = this.http.get<Descriptions[]>(`${BASE_URL}/descriptions`).pipe(map(result=>result.filter(result => result.id === items)));
-    
-  //   return console.log(item);
-    
+  // deleteGrades(id: number): Observable<{}> {
+  //   return this.http.delete<{}>(`${BASE_URL}/cars` + id).pipe(tap(console.log));
   // };
+
+
   
 }
 

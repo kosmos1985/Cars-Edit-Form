@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { ApiService } from '../api.service';
 import { Car } from '../models/car';
 
@@ -7,7 +7,7 @@ import { Car } from '../models/car';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent  {
 
   field_data = {
     make: '',
@@ -16,8 +16,6 @@ export class FormComponent implements OnInit {
 
   constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
-  }
 
   createCar(formRef: { value: string; }) {
     const newCar:Partial<Car>= {

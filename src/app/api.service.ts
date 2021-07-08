@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Car } from './models/car';
-import { map, tap} from 'rxjs/operators';
+import { tap} from 'rxjs/operators';
 import { Descriptions } from './models/descriptions';
 import { Observable } from 'rxjs';
 

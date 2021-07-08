@@ -37,6 +37,7 @@ export class FormEditComponent implements OnInit, OnDestroy {
 
   removeCar(id :number) {
     this.apiService.deleteCar(id).subscribe();
+    alert(`Success! You have removed the car with id: ${id}. Check the changes by going to the Basic or Optional tab.`);
   };
 
   

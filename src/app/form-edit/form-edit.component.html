@@ -5,7 +5,7 @@
             <th scope="col">#</th>
             <th scope="col">Make</th>
             <th scope="col">Model</th>
-            <th scope="col">Description</th>
+            <th scope="col">New description</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
@@ -15,7 +15,7 @@
             <th scope="row">{{car.id}}</th>
             <td>{{car.make}}</td>
             <td>{{car.model}}</td>
-            <td>--</td>
+            <td>{{car.desc}}</td>
             <td>
                 <button type="button" class="btn btn-success" [routerLink]="['/edit', car.id]">Edit</button>
             </td>

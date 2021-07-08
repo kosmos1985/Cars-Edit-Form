@@ -39,9 +39,10 @@ export class EditComponent implements OnInit {
   };
   updateCar(formRef: { value: string; }, id: number) {
 
-    console.log(formRef);
-    
-    this.apiService.patchCar(formRef,id).subscribe()
+    console.log(formRef);   
+    this.apiService.patchCar(formRef, id).subscribe();
+  
+    alert(`Success! You have modified the car with id: ${id}. Check the changes by going to the Basic or Optional tab.`);
   };
        
 }; 

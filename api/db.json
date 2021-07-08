@@ -16,7 +16,7 @@
     {
       "id": 3,
       "make": "Audi",
-      "author": "A6"
+      "model": "A6"
     },
     {
       "make": "vw",
@@ -24,7 +24,7 @@
       "id": 4,
       "start": "vw",
       "end": "all",
-      "desc": "german shit car"
+      "desc": "german shit cars"
     },
     {
       "make": "Ferrari",
@@ -33,6 +33,14 @@
       "start": "Ferrari",
       "end": "Dino",
       "desc": "bla bla bla"
+    },
+    {
+      "make": "Fiat",
+      "model": "Punto",
+      "id": 7,
+      "start": "Fiat",
+      "end": "Punto RS",
+      "desc": "the fastest Punto in the universe"
     }
   ],
   "descriptions": [

@@ -26,6 +26,8 @@ export class FormComponent implements OnInit {
     };
     console.log(formRef.value);
     this.apiService.postCar(newCar).subscribe();
-  }
+   
+    alert(`Success! You have created new car. Check the changes by going to the Basic or Optional tab.`);
+  };
 
 }
